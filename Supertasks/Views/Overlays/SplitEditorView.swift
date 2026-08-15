@@ -2,7 +2,7 @@ import SwiftUI
 
 let splitViewSoftLimit = 5
 
-private enum ConditionField: String, CaseIterable {
+private enum ConditionField: String, CaseIterable, Hashable {
     case project, label, priority, starred, dueBefore, dueAfter
 
     var label: String {

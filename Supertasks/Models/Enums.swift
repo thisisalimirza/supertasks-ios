@@ -1,12 +1,12 @@
 import Foundation
 
-enum TaskStatus: String, Codable, CaseIterable {
+enum TaskStatus: String, Codable, CaseIterable, Hashable {
     case inbox
     case done
     case archived
 }
 
-enum TaskPriority: String, Codable, CaseIterable {
+enum TaskPriority: String, Codable, CaseIterable, Hashable {
     case none
     case low
     case medium
@@ -30,7 +30,7 @@ enum TaskPriority: String, Codable, CaseIterable {
     }
 }
 
-enum RuleOperator: String, Codable, CaseIterable {
+enum RuleOperator: String, Codable, CaseIterable, Hashable {
     case AND
     case OR
 }
@@ -58,7 +58,7 @@ enum PickerKind: String, Hashable {
 }
 
 /// Which settings section is showing (nil = root menu).
-enum SettingsSection: String, CaseIterable {
+enum SettingsSection: String, CaseIterable, Hashable {
     case appearance
     case labels
     case views

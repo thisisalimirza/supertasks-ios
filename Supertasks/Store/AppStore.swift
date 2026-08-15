@@ -687,7 +687,7 @@ final class AppStore: ObservableObject {
     }
 }
 
-enum SplitEditorIntent {
+enum SplitEditorIntent: Hashable {
     case split
     case filter
 }
